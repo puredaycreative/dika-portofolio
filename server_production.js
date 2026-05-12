@@ -10,13 +10,15 @@ const __dirname = path.dirname(__filename);
 app.use(cors());
 app.use(express.json());
 
-// Sajikan file statis (CSS, JS frontend, dll)
+// 1. Sajikan folder 'css' agar file di dalamnya bisa diakses
+app.use('/css', express.static(path.join(__dirname, 'css')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
+
+// 2. Sajikan folder root untuk file statis lainnya (gambar, js, dll)
 app.use(express.static(__dirname));
 
-// Rute utama
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// PENTING: Untuk Vercel, jangan pakai app.listen()
 export default app;
