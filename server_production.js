@@ -10,7 +10,6 @@ const __dirname = path.dirname(__filename);
 app.use(cors());
 app.use(express.json());
 
-// 1. Sajikan folder 'css' agar file di dalamnya bisa diakses
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
 
