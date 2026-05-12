@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "https://andhika-portoku.vercel.app/$1",
+      "destination": "https://andhika-porto-sendiri.vercel.app/$1",
       "permanent": true
     }
   ],
