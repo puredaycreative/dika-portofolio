@@ -1,11 +1,15 @@
 {
   "version": 2,
   "builds": [
-    { "src": "server_production.js", "use": "@vercel/node" }
+    {
+      "src": "server_production.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "server_production.js" }
-  ],
-  "buildCommand": "yarn install",
-  "installCommand": "yarn install"
+    {
+      "src": "/(.*)",
+      "dest": "server_production.js"
+    }
+  ]
 }
